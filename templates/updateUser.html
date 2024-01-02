@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informations Utilisateur</title>
+    <!-- Ajoutez les liens vers les feuilles de style si nécessaire -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <script>
+           setTimeout(function() {
+                       var message = document.getElementById('message');
+                       message.style.display = 'none'; // Masquer le message après 2 secondes
+                   }, 2000);
+            </script>
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="color:green" class="navbar-brand" href="/home"><i class="fas fa-cogs" style="color:green"></i> Ma Super App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home"><i class="fas fa-home"></i> Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/{{ session['user_id'] }}"><i class="fas fa-user"></i> {{ session['username'] }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Modifiez vos Informations</h1><br>
+            <form action="/user/update/{{ user.id }}" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="username">Username :</label>
+                            <input type="text" class="form-control" id="username" name="username" value={{ user.username }}>
+                        </div></div>
+<div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="email">E-mail  :</label>
+                            <input type="text" class="form-control" id="email" name="email" value={{ user.email }}>
+                        </div></div>
+<div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="password">Password :</label>
+                            <input type="text" class="form-control" id="password" name="password" value={{ user.password }}>
+                        </div>
+           </div>
+                <div id="message" class="{{ alert }}" role="alert"> {{ msg }} </div>
+  <button type="submit" class="btn btn-success mt-3">Valider</button> <a href="/user/{{ user.id }}" class="btn btn-secondary mt-3">Infos</a>
+
+            </form>
+        </div></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

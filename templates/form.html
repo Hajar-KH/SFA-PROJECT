@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulaire de Transaction</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="color:green" class="navbar-brand" href="/home"><i class="fas fa-cogs" style="color:green"></i> Ma Super App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home"><i class="fas fa-home"></i> Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/{{ session['id'] }}"><i class="fas fa-user"></i> {{ session['username'] }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-4">
+        <div class="row">
+                <h2 class="mb-4">Entrez les informations de votre transaction :</h2>
+                        <div class="p-3 border bg-light">
+
+                <form action="/predict" method="POST">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="time">Temps  :</label>
+                            <input type="text" class="form-control" id="time" name="time" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="amount">Montant  :</label>
+                            <input type="text" class="form-control" id="amount" name="amount" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v1">V1 :</label>
+                            <input type="text" class="form-control" id="v1" name="v1" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v2">V2 :</label>
+                            <input type="text" class="form-control" id="v2" name="v2" required>
+                        </div>
+                    </div>
+<div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v3">V3 :</label>
+                            <input type="text" class="form-control" id="v3" name="v3" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v4">V4 :</label>
+                            <input type="text" class="form-control" id="v4" name="v4" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v5">V5 :</label>
+                            <input type="text" class="form-control" id="v5" name="v5" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v6">V6 :</label>
+                            <input type="text" class="form-control" id="v6" name="v6" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v7">V7:</label>
+                            <input type="text" class="form-control" id="v7" name="v7" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v8">V8 :</label>
+                            <input type="text" class="form-control" id="v8" name="v8" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v9">V9 :</label>
+                            <input type="text" class="form-control" id="v9" name="v9" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v10">V10 :</label>
+                            <input type="text" class="form-control" id="v10" name="v10" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v11">V11 :</label>
+                            <input type="text" class="form-control" id="v11" name="v11" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v12">V12 :</label>
+                            <input type="text" class="form-control" id="v12" name="v12" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v13">V13 :</label>
+                            <input type="text" class="form-control" id="v13" name="v13" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v14">V14 :</label>
+                            <input type="text" class="form-control" id="v14" name="v14" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v15">V15 :</label>
+                            <input type="text" class="form-control" id="v15" name="v15" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v16">V16 :</label>
+                            <input type="text" class="form-control" id="v16" name="v16" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v17">V17 :</label>
+                            <input type="text" class="form-control" id="v17" name="v17" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v18">V18 :</label>
+                            <input type="text" class="form-control" id="v18" name="v18" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v19">V19 :</label>
+                            <input type="text" class="form-control" id="v19" name="v19" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v20">V20 :</label>
+                            <input type="text" class="form-control" id="v20" name="v20" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v21">V21 :</label>
+                            <input type="text" class="form-control" id="v21" name="v21" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v22">V22 :</label>
+                            <input type="text" class="form-control" id="v22" name="v22" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v23">V23 :</label>
+                            <input type="text" class="form-control" id="v23" name="v23" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v24">V24 :</label>
+                            <input type="text" class="form-control" id="v24" name="v24" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v25">V25 :</label>
+                            <input type="text" class="form-control" id="v25" name="v25" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v26">V26 :</label>
+                            <input type="text" class="form-control" id="v26" name="v26" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="v27">V27 :</label>
+                            <input type="text" class="form-control" id="v27" name="v27" required>
+                        </div>
+
+                        <div class="form-group col-md-3">
+                            <label for="v28">V28 :</label>
+                            <input type="text" class="form-control" id="v28" name="v28" required>
+                        </div>
+
+
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-3">Soumettre</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (optional) for Bootstrap features -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

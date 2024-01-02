@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informations Utilisateur</title>
+    <!-- Ajoutez les liens vers les feuilles de style si nécessaire -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a style="color:green" class="navbar-brand" href="/home"><i class="fas fa-cogs"></i> Ma Super App</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home"><i class="fas fa-home"></i> Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/{{ session['user_id'] }}"><i class="fas fa-user"></i> {{ session['username'] }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+ <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">Informations de l'utilisateur</h1><br>
+            <p class="lead"><strong>Nom d'utilisateur:</strong> {{ user.username }}</p>
+            <p class="lead"><strong>Email:</strong> {{ user.email }}</p>
+            <p class="lead"><strong>Password:</strong> {{ user.password }}</p>
+            <a class="btn btn-success btn-lg" href="/user/update/{{ user.id }}" role="button"><i class="fas fa-field-update"></i> Modifier</a>
+
+        </div></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
