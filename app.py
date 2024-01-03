@@ -36,7 +36,7 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 # Enter your database connection details below
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = 'hajar123'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'flask_app'
 
 # Define secret key to enable session
